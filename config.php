@@ -9,7 +9,7 @@ if(ENVIRONMENT == 'development') {
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
-	$config['jwt_secret_key'] = "abC123!";
+	$config['jwt_secret_key'] = "abC123!"; // Chave secreta para validação do JWT necessário trocar a cada sistema desenvolvido.
 } else {
 	define("BASE_URL", "http://localhost/api-jwt-mvc-psr-4/");
 	$config['dbname'] = 'devstagram';

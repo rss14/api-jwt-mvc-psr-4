@@ -2,11 +2,12 @@
 namespace Core;
 
 class Controller {
-
+	// Verifica método utilizado na requisição
 	public function getMethod() {
 		return $_SERVER['REQUEST_METHOD'];
 	}
 
+	// Pega os dados enviados na requisição e padroniza a resposta independente do método utilizado
 	public function getRequestData() {
 
 		switch($this->getMethod()) {
@@ -31,6 +32,8 @@ class Controller {
 
 	}
 
+
+	// Formata o retorno em Json
 	public function returnJson($array) {
 		header("Content-Type: application/json");
 		echo json_encode($array);
